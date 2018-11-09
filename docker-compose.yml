@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  page:
+    build: .
+    command: yarn start
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
