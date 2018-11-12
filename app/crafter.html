@@ -1,0 +1,21 @@
+<p>Dummy input: 	[
+		{
+			"title": {
+				"color": "red",
+				"text": "dums"
+			}
+		},
+		{
+			"title": {
+				"color": "blue",
+ 				"text": "dims"
+			}
+		}
+	]	</p>
+<input type="text" ng-model="cardsJson"></input>
+<input type="button" ng-click="generateCards()"></input>
+
+<hr />
+<div ng-repeat="item in json">{{item}}</div>
+<hr />
+<content-item ng-repeat="item in json" content="item" />
