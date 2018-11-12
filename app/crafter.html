@@ -18,4 +18,7 @@
 <hr />
 <div ng-repeat="item in json">{{item}}</div>
 <hr />
-<content-item ng-repeat="item in json" content="item" />
+<div id="pdfcontents">
+	<content-item ng-repeat="item in json" content="item" />
+</div>
+<input type="button" ng-click="exportPdf()" value="export to pdf" />
