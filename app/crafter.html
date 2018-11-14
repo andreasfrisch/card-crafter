@@ -1,24 +1,17 @@
-<p>Dummy input: 	[
-		{
-			"title": {
-				"color": "red",
-				"text": "dums"
-			}
-		},
-		{
-			"title": {
-				"color": "blue",
- 				"text": "dims"
-			}
-		}
-	]	</p>
-<input type="text" ng-model="cardsJson"></input>
-<input type="button" ng-click="generateCards()"></input>
-
-<hr />
-<div ng-repeat="item in json">{{item}}</div>
-<hr />
-<div id="pdfcontents">
-	<content-item ng-repeat="item in json" content="item" />
+<div id="inputWrapper">
+	<div id="demonstration">
+		<h2>Reserved space</h2>
+		<div ng-repeat="item in json">{{item}}</div>
+	</div>
+	<div id="jsonInput">
+		<textarea type="textarea" class="jsonInput" ng-model="cardsJson"></textarea>
+		<input type="button" ng-click="generateCards()" value="generate"/>
+	</div>
 </div>
-<input type="button" ng-click="exportPdf()" value="export to pdf" />
+
+<div id="generatedContentsWrapper">
+	<input type="button" id="generatePdfButton" ng-click="exportPdf()" value="export to pdf" />
+	<div id="pdfcontents">
+		<content-item ng-repeat="item in json" content="item" />
+	</div>
+</div>
