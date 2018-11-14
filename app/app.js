@@ -85,6 +85,23 @@ angular.module('cardCrafter')
 angular.module('cardCrafter')
 .controller('CardCrafterController', ['$scope', function($scope) {
 	$scope.cards = []
+	$scope.cardsJson = JSON.stringify(
+	[{
+		"title": {
+			"color": "red",
+			"text": "dums"
+		},
+		"description": {
+			"text": "Use this card to win the game with handily"
+		}
+	},
+	{
+		"title": {
+			"color": "blue",
+			"text": "dims"
+		},
+		"image": "https://ih0.redbubble.net/image.112321671.2248/flat,1000x1000,075,f.jpg",
+	}])
 	
 	$scope.generateCards = function() {
 		var list = JSON.parse($scope.cardsJson)
