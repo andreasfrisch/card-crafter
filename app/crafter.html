@@ -8,10 +8,8 @@
 		<input type="button" ng-click="generateCards()" value="generate"/>
 	</div>
 </div>
-
 <div id="generatedContentsWrapper">
-	<input type="button" id="generatePdfButton" ng-click="exportPdf()" value="export to pdf" />
-	<div id="pdfcontents">
+	<div id="content">
 		<content-item ng-repeat="item in json" content="item" />
 	</div>
 </div>
