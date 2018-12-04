@@ -1,16 +1,15 @@
 <div class="card border-box" style="width: 63mm; height: 88mm; border: 2px solid;">
+	<div></div>
+	<div class="banner border-box" style="border: 2px solid" ng-style="{'background-color': (content.banner != undefined && content.banner.color != undefined) ? content.banner.color : 'green' }"
+	></div>
 	<div class="border-box" style="width:100%; height:18mm; border: 1px solid; padding-top: 5mm;">
 		<span class="title"
 			ng-style="{'color': (content.title != undefined && content.title.color != undefined) ? content.title.color : 'black' }"
 			ng-class="{'rainbow': (content.title != undefined && content.title.color != undefined && content.title.color == 'rainbow') }"
 		>{{content.title.text}}</span>
 	</div>
-	<div class="border-box" style="width:100%; height:40mm; border: 1px solid;">
-		<img
-			ng-if="content.image != undefined"
-			style="display:block; margin: auto; width:100%; height:100%"
-			ng-src="{{content.image}}"
-		/>
+	<div class="image border-box" style="width:100%; height:40mm; border: 1px solid; text-align: center;">
+		<img ng-if="content.image != undefined" ng-src="{{content.image}}" style="with:100%;height:100%;float:right;">
 	</div>
 	<div class="description border-box" style="width:100%; height:30mm; border: 1px solid">
 		<span style="margin:0; postiion:absolute;top:50%;-ms-transform:translateY(50%);transform:translateY(50%); display: inline-block; vertical-align: top;"

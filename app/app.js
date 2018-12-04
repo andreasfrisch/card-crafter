@@ -46,6 +46,9 @@ angular.module('cardCrafter')
 		},
 		"description": {
 			"text": "Use this card to win the game with handily"
+		},
+		"banner": {
+			"color": "red"
 		}
 	},
 	{
