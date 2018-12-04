@@ -57,7 +57,7 @@ angular.module('cardCrafter')
 			"text": "dims"
 		},
 		"image": "https://ih0.redbubble.net/image.112321671.2248/flat,1000x1000,075,f.jpg",
-	}])
+	}], null, 2)
 	
 	$scope.generateCards = function() {
 		var list = JSON.parse($scope.cardsJson)
