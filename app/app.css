@@ -14,12 +14,8 @@ body {
   margin: auto;
 }
 
-#demonstration {
-  width: 50%;
-  float: left;
-}
 #jsonInput {
-  width: 50%;
+  width: 100%;
   float: right;
 }
 div#jsonInput input {
@@ -56,6 +52,21 @@ div#jsonInput textarea {
   vertical-align: top;
 }
 
+.card .banner {
+  display: inline;
+  float: right;
+  position: relative;
+  top: 0px;
+  right: 10px;
+  height: 33mm;
+  width: 10mm;
+  z-index: 2;
+}
+
+.card .image {
+	background-image: url("https://ih0.redbubble.net/image.112321671.2248/flat,1000x1000,075,f.jpg");
+}
+
 .border-box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -65,6 +76,7 @@ div#jsonInput textarea {
 @media print {
   body * {
     visibility: hidden;
+	-webkit-print-color-adjust: exact !important;
   }
   #content, #content * {
     visibility: visible;
